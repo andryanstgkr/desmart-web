@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{template}">
+
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <title>List of Villages</title>
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+   <div layout:fragment="content">
+      <div class="row float-end mb-5">
+         <div class="col-sm">
+            <a th:href="@{/village/add}" class="btn btn-outline-primary"><i class="bi bi-plus-lg">Add New
+                  Village</i></a>
+         </div>
+      </div>
+      <div class="clearfix mb-5">
+         <table class="table table-striped">
+            <tr>
+               <th class="py-3"data-th-text="#{label.name}"></th>
+               <th class="py-3"data-th-text="#{label.district}"></th>
+               <th class="py-3"data-th-text="#{label.total-resident}"></th>
+            </tr>
+         </table>
+      </div>
+   </div>
+</body>
+adaasdasdasdasda
+</html>

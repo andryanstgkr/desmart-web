@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{template}">
+
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+   <title>List of Residents</title>
+   <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+   <div layout:fragment="content">
+      <div class="row float-end mb-5">
+         <div class="col-sm">
+            <a th:href="@{/village/add}" class="btn btn-outline-primary"><i class="bi bi-plus-lg">Add New
+                  Resident</i></a>
+         </div>
+      </div>
+      <div class="clearfix mb-5">
+         <table>
+            <tbody>
+               <tr>
+                  <td class="tbl-label" data-th-text="#{label.complete-name}"></td>
+                  <td>: </td>
+                  <td th:text="${resident.firstName + ' '+resident.middleName+' ' + resident.lastName}" />
+               </tr>
+               <tr>
+                  <td class="tbl-label" data-th-text="#{label.alias-name}"></td>
+                  <td>: </td>
+                  <td th:text="${resident.nickName}" />
+               </tr>
+               <tr>
+                  <td class="tbl-label" data-th-text="#{label.address}"></td>
+                  <td>: </td>
+                  <td th:text="${resident.address}" />
+               </tr>
+               <tr>
+                  <td class="tbl-label" data-th-text="#{label.gender}"></td>
+                  <td>: </td>
+                  <td th:text="${resident.gender}" />
+               </tr>
+               <tr>
+                  <td class="tbl-label" data-th-text="#{label.marriage-status}"></td>
+                  <td>: </td>
+                  <td th:text="${resident.marriageStatus}" />
+               </tr>
+               <tr>
+                  <td class="tbl-label" data-th-text="#{label.subvillage}"></td>
+                  <td>: </td>
+                  <td th:text="${resident.subVillage.name}" />
+               </tr>
+               <tr>
+                  <td class="tbl-label" data-th-text="#{label.phone-no}"></td>
+                  <td>: </td>
+                  <td th:text="${resident.phoneNo}" />
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+</body>
+
+</html>

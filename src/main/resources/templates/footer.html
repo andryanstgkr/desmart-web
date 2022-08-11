@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{template}">
+<body>
+    <!-- Footer -->
+    <p layout:fragment="footer">
+        <div class="d-flex justify-content-center row">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-muted" data-th-text="'&copy; ' + ${#dates.format(#dates.createNow(), 'yyyy')} +' Parmahan.com'">  </p>
+                </div>
+            </div>
+        </div>
+      </p>
+   
+</body>
+</html>
